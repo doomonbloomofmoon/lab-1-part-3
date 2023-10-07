@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            var p = new Par_2();
+            var p = new Par_3();
             p.Start();
         }
     }
