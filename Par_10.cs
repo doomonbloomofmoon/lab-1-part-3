@@ -11,33 +11,24 @@ namespace Lab_1_Part_3
         string text;
         public void Start()
         {
+            Console.WriteLine($"Исходная фраза:\n{text}\n");
             string[] sentences = text.Split(new[] { '.', '!' }, StringSplitOptions.RemoveEmptyEntries);
-
             StringBuilder result = new StringBuilder();
-
             foreach (string sentence in sentences)
             {
                 string[] words = sentence.Trim().Split(' ');
-
                 StringBuilder editedSentence = new StringBuilder();
-
                 string? prevWord = null;
-
                 foreach (string word in words)
                 {
                     if (word != prevWord)
-                    {
                         editedSentence.Append(word).Append(' ');
-                    }
-
                     prevWord = word;
                 }
-
                 result.Append(editedSentence.ToString().Trim()).Append(". ");
             }
-
             string editedText = result.ToString().Trim();
-            Console.WriteLine(editedText);
+            Console.WriteLine($"Результат:\n{editedText}");
         }
 
         public Par_10() 
@@ -46,3 +37,5 @@ namespace Lab_1_Part_3
         }
     }
 }
+
+
